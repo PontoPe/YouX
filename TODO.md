@@ -1,4 +1,4 @@
-# TODO — continuidade do YouX
+# TODO - continuidade do YouX
 
 - [ ] Realizar teste moderado com pelo menos cinco estudantes.
 - [ ] Medir taxa de sucesso, tempo por tarefa e pontuação SUS.

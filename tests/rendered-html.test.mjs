@@ -8,7 +8,7 @@ test("exports the YouX dashboard as a static page", async () => {
     "utf8",
   );
   assert.match(html, /<html lang="pt-BR">/i);
-  assert.match(html, /<title>YouX — sua rotina, no seu ritmo<\/title>/i);
+  assert.match(html, /<title>YouX<\/title>/i);
   assert.match(html, /Olá, Pedro\./);
   assert.match(html, /Minha semana/);
   assert.match(html, /Modo foco/);

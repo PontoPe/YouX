@@ -517,7 +517,7 @@ export default function Home() {
               <article>
                 <span>01</span>
                 <p>Melhor faixa</p>
-                <strong>18h–20h</strong>
+                <strong>18h-20h</strong>
               </article>
               <article>
                 <span>02</span>

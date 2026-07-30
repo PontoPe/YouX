@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "YouX — sua rotina, no seu ritmo",
+  title: "YouX",
   description:
     "Protótipo acadêmico de uma plataforma de organização, foco e bem-estar para universitários.",
   icons: {
