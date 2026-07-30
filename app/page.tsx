@@ -98,7 +98,7 @@ export default function Home() {
   const [toast, setToast] = useState("");
   const [secondsLeft, setSecondsLeft] = useState(25 * 60);
   const [timerRunning, setTimerRunning] = useState(false);
-  const [todayLabel, setTodayLabel] = useState("Sua rotina de hoje");
+  const [todayLabel, setTodayLabel] = useState("Hoje");
   const [highContrast, setHighContrast] = useState(false);
   const titleInputRef = useRef<HTMLInputElement>(null);
 
@@ -211,7 +211,7 @@ export default function Home() {
     setTaskTitle("");
     setTaskDue("Hoje, 21:00");
     closeTaskForm();
-    setToast("Tarefa adicionada à sua rotina.");
+    setToast("Tarefa adicionada.");
   }
 
   function resetTimer() {
@@ -277,9 +277,9 @@ export default function Home() {
             <p className="eyebrow">{todayLabel}</p>
             <h1>
               {view === "inicio" && "Olá, Pedro."}
-              {view === "semana" && "Sua semana, sem ruído."}
-              {view === "foco" && "Uma coisa de cada vez."}
-              {view === "insights" && "Seu ritmo em perspectiva."}
+              {view === "semana" && "Minha semana"}
+              {view === "foco" && "Modo foco"}
+              {view === "insights" && "Resumo de foco"}
             </h1>
           </div>
           <button className="primary-button" onClick={openTaskForm}>
@@ -294,10 +294,7 @@ export default function Home() {
                 <span className="status-chip">Próximo passo</span>
                 <p className="hero-course">Interação Humano-Computador</p>
                 <h2 id="next-step-title">Finalizar o fluxo principal do protótipo</h2>
-                <p>
-                  Você reservou este bloco para hoje. Comece com uma sessão curta
-                  e avance sem precisar decidir o que fazer agora.
-                </p>
+                <p>Esta é a tarefa marcada para hoje. A sessão dura 25 minutos.</p>
                 <div className="hero-actions">
                   <button className="dark-button" onClick={() => changeView("foco")}>
                     Iniciar foco
@@ -375,7 +372,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="helper-text">
-                    A sugestão de ritmo se adapta ao que você informa.
+                    Use este registro ao planejar o próximo bloco de estudo.
                   </p>
                 </section>
 
@@ -389,7 +386,7 @@ export default function Home() {
                   <div>
                     <p className="eyebrow">Foco nesta semana</p>
                     <h2>3h 42min</h2>
-                    <span className="positive">↑ 18% no seu ritmo</span>
+                    <span className="positive">Dados de demonstração</span>
                   </div>
                 </section>
               </div>
@@ -401,10 +398,10 @@ export default function Home() {
           <section className="week-layout">
             <div className="week-summary">
               <p className="eyebrow">Visão semanal</p>
-              <h2>Quatro dias para avançar com calma.</h2>
+              <h2>Tarefas dos próximos dias</h2>
               <p>
-                Os blocos foram distribuídos por prioridade. Concluir uma tarefa
-                atualiza seu progresso imediatamente.
+                As tarefas estão separadas por data. Ao concluir uma delas, o
+                progresso é atualizado.
               </p>
               <div className="week-progress" aria-label={`${progress}% das tarefas concluídas`}>
                 <span style={{ width: `${progress}%` }} />
@@ -432,7 +429,7 @@ export default function Home() {
                       </button>
                     ))}
                   {tasks.filter((_, taskIndex) => taskIndex % 4 === dayIndex).length === 0 && (
-                    <p className="empty-day">Espaço livre para respirar.</p>
+                    <p className="empty-day">Nenhuma tarefa cadastrada.</p>
                   )}
                 </section>
               ))}
@@ -479,7 +476,7 @@ export default function Home() {
                 <li>Ao terminar, registre o próximo passo.</li>
               </ol>
               <div className="privacy-note">
-                <strong>Seu tempo é seu.</strong>
+                <strong>Armazenamento local</strong>
                 <p>Os dados desta demonstração ficam somente neste navegador.</p>
               </div>
             </aside>
@@ -489,11 +486,11 @@ export default function Home() {
         {view === "insights" && (
           <section className="insights-layout">
             <div className="insight-intro">
-              <p className="eyebrow">Últimos 7 dias</p>
-              <h2>Seu melhor ritmo acontece no começo da noite.</h2>
+              <p className="eyebrow">Dados de demonstração</p>
+              <h2>Maior concentração entre 18h e 20h</h2>
               <p>
-                Você manteve constância sem ultrapassar duas sessões seguidas.
-                Isso ajuda a equilibrar progresso e descanso.
+                Os números abaixo simulam uma semana de uso e não representam
+                um histórico real.
               </p>
             </div>
             <section className="chart-panel" aria-labelledby="chart-title">
