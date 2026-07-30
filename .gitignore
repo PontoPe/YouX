@@ -36,3 +36,5 @@ next-env.d.ts
 *.tsbuildinfo
 /outputs/
 /entregaveis/
+/entregas/
+/_work_as/

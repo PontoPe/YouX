@@ -4,9 +4,13 @@ Projeto de Interação Humano-Computador desenvolvido por **Pedro Gradowski Mart
 
 ## Conceito
 
-O YouX é uma plataforma de apoio à rotina acadêmica. A proposta reúne organização de tarefas, sessões de foco e check-ins de energia em uma interface que reduz decisões desnecessárias e mantém o estudante no controle.
+O YouX ajuda estudantes a organizar tarefas, estudar em blocos de foco e acompanhar a semana sem deixar a tela carregada.
 
 O nome combina “You” (você) e “Experience” (experiência): a rotina se adapta ao usuário, e não o contrário.
+
+## Acesso
+
+O protótipo está disponível em [pontope.github.io/YouX](https://pontope.github.io/YouX/).
 
 ## Funcionalidades do protótipo
 
@@ -36,6 +40,6 @@ Esta versão não envia dados para servidores. As tarefas ficam somente no armaz
 ## Estrutura da entrega
 
 - `app/`: protótipo funcional;
-- `entregaveis/`: relatório e apresentação;
+- `.github/workflows/`: publicação automática no GitHub Pages;
 - `.env.example`: referência segura de configuração;
 - `TODO.md`: continuidade sugerida do projeto.
